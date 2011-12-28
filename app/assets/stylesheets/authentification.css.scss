@@ -1,0 +1,63 @@
+/*** LOGIN ***/
+
+#login-container {
+	background: url('images/login_bg.png') no-repeat transparent center center;
+	width: 659px;
+	height:235px;
+	margin: 0 auto;
+	margin-top:60px;
+	padding: 32px;
+}
+
+.register {
+	background: url('images/register_bg.png') no-repeat transparent center center !important;
+}
+
+#login-container form {
+	width: 440px;
+	padding-top: 90px;
+}
+
+label.login {
+	margin-left: 10px;
+}
+
+input[type="submit"].login {
+	margin-top: 25px;
+}
+
+#login-container .login{
+	padding-bottom: 30px; 
+	position: relative; 
+	float: right; 
+}
+
+#user_new {
+	padding-top: 80px !important; 
+	width: 400px !important;
+}
+
+#login-container label {
+	display: block; 
+	float: left; 
+	width: 120px; 
+	margin-bottom: 7px; 
+}
+
+#login-container input {
+	float: left; 
+	margin-bottom: 7px; 
+}
+
+#login-container input[type=submit] {
+	float: right; 
+	margin-right: 70px; 
+	margin-top: 10px; 
+}
+
+.shared_links {
+	margin-top: 231px;
+	font-size: 12px; 
+	margin-left: 20px;
+	line-height: 13px; 
+}
