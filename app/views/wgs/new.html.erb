@@ -1,0 +1,15 @@
+<h1>Neue WG</h1>
+
+<%= form_for(@wg) do |f| %>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+<% end %>
+
+<%= link_to "Zurück", wgs_path %>

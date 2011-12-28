@@ -1,0 +1,11 @@
+<?php
+
+	$DatabaseHost = 'localhost';
+	$DatabaseUser = 'root';
+	$DatabasePassword = '';
+	$Database = 'finance';
+
+	$users = array(
+            'name' => 'password'
+        );
+?>

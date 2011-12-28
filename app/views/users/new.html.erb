@@ -1,0 +1,15 @@
+<h1>Neuer User</h1>
+
+<%= form_for(@user) do |f| %>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+<% end %>
+
+<%= link_to "Zurück", users_path %>

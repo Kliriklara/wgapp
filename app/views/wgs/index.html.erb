@@ -1,0 +1,12 @@
+<h1>WGs</h1>
+
+<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+
+
+<%= link_to "Neue WG", new_wg_path %>
+
+<ul>
+  <% @wgs.each do |wg| %>
+    <li><%= wg.name %> | <%= wg.date %> 
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wg_id: 1
+  name: MyText
+  email: MyString
+
+two:
+  wg_id: 1
+  name: MyText
+  email: MyString
