@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wgapp</title>
+  <title>WG-App</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="alert_wrapper"><span class="notice"><%= notice %></span></div>
+  <div class="alert_wrapper"><span class="alert"><%= alert %></span></div>
 </head>
 <body>
 

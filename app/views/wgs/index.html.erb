@@ -5,8 +5,10 @@
 
 <%= link_to "Neue WG", new_wg_path %>
 
+<%= current_user.wg_id %>
+
 <ul>
   <% @wgs.each do |wg| %>
-    <li><%= wg.name %> | <%= wg.date %> 
+    <li><%= link_to wg.name, wg %> | <%= wg.date %> 
   <% end %>
 </ul>

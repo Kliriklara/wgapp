@@ -7,3 +7,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function() {
+	// hide alert/notice bar if empty
+	$("span.alert:empty, span.notice:empty").hide();
+}); 
