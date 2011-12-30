@@ -110,3 +110,12 @@ input, select {
 }
 
 /*******************/
+
+body {
+    font-size: 14px;
+    background-image: url("images/bg.jpg");
+    font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    color: #3b3b3b;
+    width:100%;
+    height:100%;
+}
