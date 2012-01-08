@@ -21,23 +21,8 @@
 	            <span class="info_box_bottom"></span>
 	        </div>
 
-	        <div id="eintrag_form">
-
-	        <%= form_for @buying, :as => :buying, :url => buyings_path do |f| %>
- 			 <p>
-			    <%= f.label :costs %> 
-			    <%= f.text_field :costs %> €
-			  </p>
-			  <p>
-			    <%= f.label :description %>
-			    <%= f.text_area :description %>
-			  </p>
-			  <p>
-			    <%= f.submit 'Submit' %>
-			  </p>
-			<% end %>
-
-	        </div>	
+			<%= render 'buyings/new' %>
+			
 	        <div style="clear: both;"></div>	
 		</div>
 
@@ -54,7 +39,7 @@
   
 		<div class="content_box">
 		    <div class="content_box_top left">
-		        <h2><%= u.email %></h2>
+		        <h2><%= u.name %></h2>
 		    </div>
 		    <div class="content_box_schrage left"></div> 
 		    <div style="clear:both"></div>
@@ -65,54 +50,16 @@
 			  </div>
   
 			  <div class="entry" id="">
-			        <div class="sub_entry" id="">
-					    <div class="item-left left">
-					      <span class="value">46,50</span>
-			                      
-			                     <div class="edit left" title="Eintrag bearbeiten" onClick=""></div>
-					      <div class="delete left" title="Eintrag löschen" onClick=""></div>
-
-					    </div>
-			            <div class="comment left">afd a dfasdf asdf asdf saf </div>
-					    <div style="clear:both;"></div>
-			                    <div class="sub_entry_line"></div>
-			        </div>
-			        <div class="sub_entry" id="">
-					    <div class="item-left left">
-					      <span class="value">46,50</span>
-			                      
-			                     <div class="edit left" title="Eintrag bearbeiten" onClick=""></div>
-					      <div class="delete left" title="Eintrag löschen" onClick=""></div>
-
-					    </div>
-			            <div class="comment left">afd adf asda sdfa sdasdfasfsdasdfa sffasdf asdf asdfa sdfsdfa  a dfasdf asdf asdf saf </div>
-					    <div style="clear:both;"></div>
-			                    <div class="sub_entry_line"></div>
-			        </div>
-
+			        
+					<%= render u.buyings %>
+			        
 				  <div class="monthly-sum">Summe: €&nbsp;<span style="font-size:16px"></span></div>
 
 			  </div>
   			</div>
 		</div>
 		<% end %>
-		   
-		<div class="content_box">
-		    <div class="content_box_top left">
-		        <h2>bbb</h2>
-		    </div>
-		    <div class="content_box_schrage left"></div> 
-		    <div style="clear:both"></div>
-		    <div class="content_box_contentWrapper"></div>
-		</div>
-		<div class="content_box">
-		    <div class="content_box_top left">
-		        <h2>cccdasfasdf</h2>
-		    </div>
-		    <div class="content_box_schrage left"></div> 
-		    <div style="clear:both"></div>
-		    <div class="content_box_contentWrapper"></div>
-		</div>
+
 		<div style="clear:both"></div>
 
 

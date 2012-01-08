@@ -10,6 +10,7 @@ Wgapp::Application.routes.draw do
 
   resources :wgs do
     get 'show', :on => :collection
+	get :joinWg, :on => :member, :as => 'joinWg'
   end
 
 

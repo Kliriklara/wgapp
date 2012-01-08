@@ -14,7 +14,14 @@
 
 <ul class="wgs">
   <% @wgs.each do |wg| %>
-    <li><%= link_to wg.name, wg %> | <%= wg.date %> 
+	<%= wg.id %>
+	<li>
+	
+		<%= link_to wg.name, joinWg_wg_path(wg) %> | <%= wg.date %>
+	
+	</li>
+
+
   <% end %>
 </ul>
 

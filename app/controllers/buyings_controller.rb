@@ -1,5 +1,6 @@
 class BuyingsController < ApplicationController
-  def index
+  def show
+    @buyings = u.buyings
   end
 
   def new
