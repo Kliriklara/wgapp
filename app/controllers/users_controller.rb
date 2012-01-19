@@ -16,8 +16,6 @@ class UsersController < ApplicationController
 
   def show 
     @wg = current_user.wg
-    
-
   end 
 
 end

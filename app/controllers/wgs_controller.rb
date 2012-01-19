@@ -37,7 +37,8 @@ class WgsController < ApplicationController
     #show specific wg
     @wg = Wg.find(params[:id])
 	  @current = current_user
-
+    @costs = @wg.calculate_costs(current_user)
+    @soll_or_haben = @wg.soll_or_haben(@costs)
   end
 
 end

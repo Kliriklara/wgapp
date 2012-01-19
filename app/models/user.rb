@@ -15,6 +15,6 @@ class User < ActiveRecord::Base
     end
 
 	  @sum = sumi
-
   end 
+
 end
