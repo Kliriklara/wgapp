@@ -27,16 +27,17 @@ class WgsController < ApplicationController
   end
 
   def joinWg
-	@wg = Wg.find(params[:id])
-	current_user.wg=(@wg)
-	current_user.save
-	redirect_to @wg
+  	@wg = Wg.find(params[:id])
+  	current_user.wg=(@wg)
+  	current_user.save
+  	redirect_to @wg
   end
 
   def show 
     #show specific wg
     @wg = Wg.find(params[:id])
-    @users = @wg.users
+	  @current = current_user
+
   end
 
 end

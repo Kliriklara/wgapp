@@ -1,7 +1,4 @@
 class BuyingsController < ApplicationController
-  def show
-    @buyings = u.buyings
-  end
 
   def new
   	@buying = Buying.new
@@ -14,9 +11,14 @@ class BuyingsController < ApplicationController
   	@buying.update_attribute :date, date
   	@buying.update_attribute :date, date
   	current_user.buyings << @buying
-  	current_user.save 
-
-	redirect_to wgs_path
+	
+  	if current_user.save 
+      redirect_to wgs_path, :notice => 'Einkauf wurde gespeichert.'
+	  else 
+		  redirect_to wgs_path, :notice => 'Einkauf konnte nicht gespeichert werden.'
+	  end
+		
+	  
   end
 
 end

@@ -36,7 +36,7 @@ nav {
 }
 
 header div.header_title {
-    padding:10px 10px 4px;
+    padding:7px 10px 7px;
     border-radius: 5px 5px 0 0;
     background: rgba(236,236,236,.8);
     position: relative;
@@ -218,10 +218,6 @@ header .header_logout a {
     margin-top:15px;
     float: left;
     margin-right: 10px;
-}
-
-.content_box:last-child {
-	margin-right: 0px !important;
 }
 
 .content_box_contentWrapper {
@@ -469,4 +465,15 @@ header .header_logout a {
 #new_wg label {
 	width: 100px;
 	display: inline-block;
+}
+
+.signedinas {
+	float: right; 
+	margin-top: 8px; 
+	margin-right: 10px; 
+	font-size: 11px;
+}
+
+.content_box {
+	margin-right: 7px !important; 
 }

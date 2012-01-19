@@ -5,4 +5,14 @@ class Wg < ActiveRecord::Base
 	
 	attr_accessible :id, :name, :description, :date, :reset
 
+  def calculate_costs()
+  	sumi = 0
+
+  	buyings.each do |c|
+	    sumi += c.costs
+    end
+
+	  @sum = sumi
+  end 
+
 end

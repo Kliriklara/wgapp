@@ -6,4 +6,15 @@ class User < ActiveRecord::Base
 
   belongs_to :wg
   has_many :buyings
+
+  def buyings_sum()
+  	sumi = 0
+
+  	buyings.each do |c|
+	    sumi += c.costs
+    end
+
+	  @sum = sumi
+
+  end 
 end
