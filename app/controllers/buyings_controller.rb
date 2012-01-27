@@ -1,4 +1,10 @@
 class BuyingsController < ApplicationController
+  respond_to :html, :json
+  before_filter :authenticate_user!
+
+  def show
+    @buyings = u.buyings
+  end
 
   def new
   	@buying = Buying.new
@@ -20,5 +26,21 @@ class BuyingsController < ApplicationController
 		
 	  
   end
+  
+  def edit
+    @buying = Buying.find(params[:id])
+  end
 
+  def destroy
+    @buying = Buying.find(params[:id])
+    @buying.destroy
+    redirect_to wgs_path
+  end
+  
+  def update
+    @buying = Buying.find(params[:id])
+	@buying.update_attributes(params[:buying])
+	respond_with(wgs_path)
+  end
+  
 end

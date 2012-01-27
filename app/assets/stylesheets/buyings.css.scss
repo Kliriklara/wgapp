@@ -1,3 +1,119 @@
 // Place all the styles related to the Buyings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#edit_popup {
+    float:right;
+    width: 600px;
+    height: 240px;
+
+    border-radius: 5px;
+    background-color: #fafafa;
+    -moz-box-shadow: inset 0px 1px 5px rgba(33,33,33,0.5);
+    -webkit-box-shadow: inset 0px 1px 5px rgba(33,33,33,0.5);
+    font-size: 13px;
+    padding-top: 0px;
+	
+	overflow:hidden;
+}
+
+#edit_blue {
+
+	width:100%;
+
+	background-image: linear-gradient(bottom, rgb(41,73,120) 13%, rgb(89,120,163) 57%);
+	background-image: -o-linear-gradient(bottom, rgb(41,73,120) 13%, rgb(89,120,163) 57%);
+	background-image: -moz-linear-gradient(bottom, rgb(41,73,120) 13%, rgb(89,120,163) 57%);
+	background-image: -webkit-linear-gradient(bottom, rgb(41,73,120) 13%, rgb(89,120,163) 57%);
+	background-image: -ms-linear-gradient(bottom, rgb(41,73,120) 13%, rgb(89,120,163) 57%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.13, rgb(41,73,120)),
+		color-stop(0.57, rgb(89,120,163))
+	);
+	
+	vertical-align:middle;
+}
+
+#edit_blue h1 {
+	
+	
+	font-size: 13px;
+	font-weight: normal;
+	height: 28px;
+	position:relative;
+	
+	
+	color:#ffffff;
+	
+	margin-bottom: 15px;
+}
+
+#edit_form {
+	padding: 15px 40px;
+}
+
+#edit_form label {
+    width: 90px;
+    display: inline-block;
+	vertical-align: top;
+	padding-top: 3px;
+}
+
+#edit_form textarea, #eintrag_form input[type=text] {
+	border: 1px solid grey;
+}
+
+#edit_form textarea {
+    width:408px;
+    height: 60px;
+}
+
+.dialog-body textarea {
+    width: 413px;
+}
+
+#edit_form input[type=text], .dialog-body input[type=text] {
+    width: 130px;
+}
+
+#edit_form p {
+	margin-bottom: 20px;
+}
+
+#edit_form input[type=submit] {
+	margin-left: 94px;
+	
+	background-image: linear-gradient(bottom, rgb(153,142,107) 20%, rgb(199,185,140) 90%);
+	background-image: -o-linear-gradient(bottom, rgb(153,142,107) 20%, rgb(199,185,140) 90%);
+	background-image: -moz-linear-gradient(bottom, rgb(153,142,107) 20%, rgb(199,185,140) 90%);
+	background-image: -webkit-linear-gradient(bottom, rgb(153,142,107) 20%, rgb(199,185,140) 90%);
+	background-image: -ms-linear-gradient(bottom, rgb(153,142,107) 20%, rgb(199,185,140) 90%);
+	
+	background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+			color-stop(0.20, rgb(153,142,107)),
+            color-stop(0.90, rgb(199,185,140))
+        );
+		
+	border: 1px solid #b5a87f;
+	border-radius: 3px;
+	-moz-box-shadow: outset 0px 1px 5px rgba(33,33,33,0.5);
+    -webkit-box-shadow: outset 0px 1px 5px rgba(33,33,33,0.5);
+	height: 30px;
+	
+	color: #ffffff;
+	font-size:16px;
+}
+
+.best_in_place {
+	cursor: pointer;
+	background-image: url("/images/pen_normal.png");
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}

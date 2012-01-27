@@ -7,9 +7,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
+//= require jquery.purr
+//= require best_in_place
 
 $(document).ready(function() {
 	// hide alert/notice bar if empty
 	$("span.alert:empty, span.notice:empty").hide();
+	jQuery(".best_in_place").best_in_place();
+	
+	$('.best_in_place').hover(
+		function () {
+			$(this).css("background-image", "url(/images/pen_hover.png)");
+		},
+		function () {
+			$(this).css("background-image", "url(/images/pen_normal.png)");
+		}
+	);
+
+  
 }); 

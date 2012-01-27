@@ -1,7 +1,8 @@
 <%= div_for user do %>
 <div class="content_box">
 	<div class="content_box_top left">
-		<h2><%= user.name %></h2>
+		<h2><%= user.name %><%= link_to image_tag('images/delete_normal.png', :border => 0, :mouseover=>'images/delete_hover.png'), user, :confirm => "Are you sure?",
+:method => :delete %></h2>
 	</div>
 	<div class="content_box_schrage left"></div> 
 	<div style="clear:both"></div>
