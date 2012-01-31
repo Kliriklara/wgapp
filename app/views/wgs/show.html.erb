@@ -1,48 +1,49 @@
 
 <div id="content">
-	<nav>
-	    <header>
-	        <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
-	        <div class="header_title"><%= @wg.name %> </div>
-			<div class="signedinas">Signed in as <%= @current.name %></div>
-	    </header>
-	</nav>
+    <nav>
+        <header>
+            <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+            <div class="move_to"><%= link_to 'Move into other wg', change_wg_wg_path %></div>
+            <div class="header_title"><%= @wg.name %> </div>
+            <div class="signedinas">Signed in as <%= current_user.name %></div>
+        </header>
+    </nav>
 
-	<div style="clear: both;"></div>
+    <div style="clear: both;"></div>
 
-	<div class="main">
+    <div class="main">
 
-		<div class="content_header">
-	        <div class="info_box">
-	            <span class="info_box_top"></span>
-	            <div class="info_box_content">
-	                <p>Immer schön benutzen damit die Arbeit nicht umsonst war!</p>
-	                <p class="box_line_height">Rechts kannst du einen <span>neuen Eintrag</span> machen!</p><br />
-	            </div>
-	            <span class="info_box_bottom"></span>
-	        </div>
+        <div class="content_header">
+            <div class="info_box">
+                <span class="info_box_top"></span>
+                <div class="info_box_content">
+                    <p>Immer schön benutzen damit die Arbeit nicht umsonst war!</p>
+                    <p class="box_line_height">Rechts kannst du einen <span>neuen Eintrag</span> machen!</p><br />
+                </div>
+                <span class="info_box_bottom"></span>
+            </div>
 
-			<%= render 'buyings/new' %>
-			
-	        <div style="clear: both;"></div>	
-		</div>
+            <%= render 'buyings/new' %>
+            
+            <div style="clear: both;"></div>    
+        </div>
 
-		<div class="clear"></div>
-		<div id="diff">
-		    <div class="diff_box">
-		        <div class="diff_name">Soviel bist du im <%= @soll_or_haben %>:</div>
-		        <div class="diff_value <%= @soll_or_haben %>"><%= @costs %></div>
-		       
-		    </div>
-		</div>
-		
-		<%= render @wg.users %>
+        <div class="clear"></div>
+        <div id="diff">
+            <div class="diff_box">
+                <div class="diff_name">Soviel bist du im <%= @finances %>:</div>
+                <div class="diff_value <%= @finances %>"><%= @costs %></div>
+               
+            </div>
+        </div>
+        
+        <%= render @wg.users %>
 
-		<div style="clear:both"></div>
-		
-		
+        <div style="clear:both"></div>
+        
+        
 
 
-	</div>
+    </div>
 
 </div>

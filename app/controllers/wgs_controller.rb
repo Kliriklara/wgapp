@@ -3,8 +3,7 @@ class WgsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    #list wgs
-  	@wgs = Wg.all
+    @wgs = Wg.all
     @wg = current_user.wg
     if @wg.nil? 
     else 
@@ -13,32 +12,34 @@ class WgsController < ApplicationController
   end
 
   def new
-  	@wg = Wg.new
+    @wg = Wg.new
   end
 
-  def create 
-  	date = Time.now
-  	@wg = Wg.new(params[:wg])
-  	@wg.save
-  	@wg.update_attribute :date, date
+  def create
+    current_user.build_wg(params[:wg])
+    current_user.save
+    redirect_to wgs_path
+  end
+
+  def join_wg
+    @wg = Wg.find(params[:id])
     current_user.wg=(@wg)
     current_user.save
-  	redirect_to wgs_path
-  end
-
-  def joinWg
-  	@wg = Wg.find(params[:id])
-  	current_user.wg=(@wg)
-  	current_user.save
-  	redirect_to @wg
+    redirect_to @wg
   end
 
   def show 
-    #show specific wg
     @wg = Wg.find(params[:id])
-	  @current = current_user
     @costs = @wg.calculate_costs(current_user)
-    @soll_or_haben = @wg.soll_or_haben(@costs)
+    @finances = @wg.credit_or_debit(@costs)
   end
+
+  def change_wg
+    current_user.wg = nil
+    current_user.save
+    current_user.buyings_destroy()
+    redirect_to wgs_path
+  end
+
 
 end

@@ -7,24 +7,19 @@ class BuyingsController < ApplicationController
   end
 
   def new
-  	@buying = Buying.new
+    @buying = Buying.new
   end
 
   def create
-  	@buying = Buying.new(params[:buying])
-  	@buying.save
-  	date = Time.now
-  	@buying.update_attribute :date, date
-  	@buying.update_attribute :date, date
-  	current_user.buyings << @buying
-	
-  	if current_user.save 
+    @buying = Buying.new(params[:buying])
+    current_user.buyings << @buying
+  
+    if current_user.save 
       redirect_to wgs_path, :notice => 'Einkauf wurde gespeichert.'
-	  else 
-		  redirect_to wgs_path, :notice => 'Einkauf konnte nicht gespeichert werden.'
-	  end
-		
-	  
+    else 
+      redirect_to wgs_path, :notice => 'Einkauf konnte nicht gespeichert werden.'
+    end
+    
   end
   
   def edit
@@ -39,8 +34,8 @@ class BuyingsController < ApplicationController
   
   def update
     @buying = Buying.find(params[:id])
-	@buying.update_attributes(params[:buying])
-	respond_with(wgs_path)
+    @buying.update_attributes(params[:buying])
+    respond_with(wgs_path)
   end
   
 end

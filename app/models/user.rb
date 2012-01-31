@@ -8,13 +8,13 @@ class User < ActiveRecord::Base
   has_many :buyings
 
   def buyings_sum()
-  	sumi = 0
-
-  	buyings.each do |c|
-	    sumi += c.costs
-    end
-
-	  @sum = sumi
+    buyings.sum('costs')
   end 
+
+  def buyings_destroy()
+    buyings.each do |c|
+        c.destroy
+    end
+  end
 
 end

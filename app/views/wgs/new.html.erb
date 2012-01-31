@@ -1,33 +1,33 @@
 
 <div id="content">
-	<nav>
-	    <header>
-	        <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
-	        <div class="header_title"><%= link_to "Join WG", wgs_path %></div>
-	    </header>
-	</nav>
+    <nav>
+        <header>
+            <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+            <div class="header_title"><%= link_to "Join WG", wgs_path %></div>
+        </header>
+    </nav>
 
-	<div style="clear: both;"></div>
+    <div style="clear: both;"></div>
 
-	<div class="main">
+    <div class="main">
 
 <br/>
-	<h3>Neue WG</h3>
+    <h3>Neue WG</h3>
 
-	<div style="line-height: 30px;">
-	<%= form_for(@wg) do |f| %>
-	  <p>
-	  	<%= f.label :name %> 
-	    <%= f.text_field :name %>
-	  </p>
-	  <p>
-	  	<%= f.label :description %> 
-	    <%= f.text_field :description %>
-	  </p>
-	  <p>
-	    <%= f.submit "Speichern" %>
-	  </p>
-	<% end %>
-	</div>
-	</div>
+    <div style="line-height: 30px;">
+    <%= form_for(@wg) do |f| %>
+      <p>
+        <%= f.label :name %> 
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :description %> 
+        <%= f.text_field :description %>
+      </p>
+      <p>
+        <%= f.submit "Speichern" %>
+      </p>
+    <% end %>
+    </div>
+    </div>
 </div>

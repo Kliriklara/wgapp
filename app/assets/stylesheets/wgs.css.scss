@@ -507,3 +507,18 @@ header .header_logout a {
 .content_box {
 	margin-right: 7px !important; 
 }
+
+header .move_to {
+  position: relative;
+  float:right;
+  z-index: 0;
+  padding:8px 18px 6px;
+  border-radius: 0px 5px 0 0;
+  background: rgba(236,236,236,.8);
+  box-shadow: 1px -2px 3px rgba(33,33,33,.20);
+}
+
+header .move_to a {
+ font-size: 14px;
+    color: #3b3b3b;
+}

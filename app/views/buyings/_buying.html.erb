@@ -1,19 +1,17 @@
 <%= div_for buying do %>
 <div class="sub_entry" id="">
-	<div class="item-left left">
+    <div class="item-left left">
 
-	  <span class="value"><%= best_in_place buying, :costs, :html_attrs => { :style => "width:30px;" } %></span>
-			  
-		
-	<div class="delete left" title="Eintrag löschen" onClick=""><%= link_to image_tag('images/delete_normal.png', :border => 0, :mouseover=>'images/delete_hover.png'), buying, :confirm => "Are you sure?",
+      <span class="value"><%= best_in_place buying, :costs, :html_attrs => { :style => "width:30px;" } %></span>
+              
+        
+    <div class="delete left" title="Eintrag löschen" onClick=""><%= link_to image_tag('images/delete_normal.png', :border => 0, :mouseover=>'images/delete_hover.png'), buying, :confirm => "Are you sure?",
 :method => :delete %></div>
 
-	</div>
-	<div class="comment left"><%= best_in_place buying, :description, :html_attrs => { :style => "width:180px;" } %></div>
-	<div style="clear:both;"></div>
-	<div class="sub_entry_line"></div>
+    </div>
+    <div class="comment left"><%= best_in_place buying, :description, :html_attrs => { :style => "width:180px;" } %></div>
+    <div style="clear:both;"></div>
+    <div class="sub_entry_line"></div>
 </div>
 
 <% end %>
-
-

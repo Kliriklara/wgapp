@@ -1,25 +1,25 @@
 <div id="content">
-	<nav>
-	    <header>
-	        <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
-	        <div class="header_title"><%= link_to "Neue WG", new_wg_path %></div>
-	    </header>
-	</nav>
+    <nav>
+        <header>
+            <div class="header_logout"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></div>
+            <div class="header_title"><%= link_to "Neue WG", new_wg_path %></div>
+        </header>
+    </nav>
 
-	<div style="clear: both;"></div>
+    <div style="clear: both;"></div>
 
-	<div class="main">
+    <div class="main">
 
 <br/><h3>Join a WG</h3></br>
 
 <ul class="wgs">
   <% @wgs.each do |wg| %>
-	<%= wg.id %>
-	<li>
-	
-		<%= link_to wg.name, joinWg_wg_path(wg) %> | <%= wg.date %>
-	
-	</li>
+    <%= wg.id %>
+    <li>
+    
+        <%= link_to wg.name, join_wg_wg_path(wg) %> | <%= wg.date %>
+    
+    </li>
 
 
   <% end %>

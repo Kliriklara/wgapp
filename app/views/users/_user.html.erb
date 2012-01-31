@@ -1,24 +1,24 @@
 <%= div_for user do %>
 <div class="content_box">
-	<div class="content_box_top left">
-		<h2><%= user.name %><%= link_to image_tag('images/delete_normal.png', :border => 0, :mouseover=>'images/delete_hover.png'), user, :confirm => "Are you sure?",
+    <div class="content_box_top left">
+        <h2><%= user.name %><%= link_to image_tag('images/delete_normal.png', :border => 0, :mouseover=>'images/delete_hover.png'), user, :confirm => "Are you sure?",
 :method => :delete %></h2>
-	</div>
-	<div class="content_box_schrage left"></div> 
-	<div style="clear:both"></div>
-	<div class="content_box_contentWrapper">
+    </div>
+    <div class="content_box_schrage left"></div> 
+    <div style="clear:both"></div>
+    <div class="content_box_contentWrapper">
 
-	<div class="month" id="">
-		   <span>Jänner</span><span class="arrow right open"></span>
-	  </div>
+    <div class="month" id="">
+           <span>Jänner</span><span class="arrow right open"></span>
+      </div>
 
-	  <div class="entry" id="">
-			
-			<%= render user.buyings %>
-			
-		  <div class="monthly-sum">Summe: <%= user.buyings_sum() %>€&nbsp;<span style="font-size:16px"></span></div>
+      <div class="entry" id="">
+            
+            <%= render user.buyings %>
+            
+          <div class="monthly-sum">Summe: <%= user.buyings_sum() %>€&nbsp;<span style="font-size:16px"></span></div>
 
-	  </div>
-	</div>
+      </div>
+    </div>
 </div>
 <% end %>
